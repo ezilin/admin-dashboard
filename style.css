@@ -1,7 +1,12 @@
+:root {
+    --main-color: #14b8a6;
+}
+
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: Arial;
 }
 
 .container {
@@ -13,15 +18,111 @@ body {
 }
 
 header {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
     grid-area: 1 / 2 / 2 / 3;
     background-color: white;
+    margin: 0 60px 0 60px;
+}
+
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 1 / 2;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 8px;
+}
+
+.search input {
+    height: 40px;
+    width: 800px;
+    background-color: #e7e5e4;
+    border: hidden;
+    font-size: 24px;
+    border-radius: 20px;
+}
+
+.search img {
+    width: 40px;
+    height: auto;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.icons img {
+    width: 40px;
+    height: auto;
+}
+
+.icons .pf {
+    width: 60px;
+    border-radius: 50px;
+}
+
+.lower-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.greetings {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.greetings img {
+    width: 100px;
+    border-radius: 100px;
+}
+
+.welcome {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.name > span {
+    font-weight: normal;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.buttons button {
+    height: 60px;
+    width: 150px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 100px;
+    border: hidden;
 }
 
 .sidebar {
-    display: grid;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
     grid-area: 1 / 1 / 3 / 2;
-    background-color: #14b8a6;
+    background-color: var(--main-color);
     font-weight: bold;
     color: white;
 }
@@ -30,8 +131,7 @@ header {
     display: flex;
     align-items: center;
     align-self: start;
-    margin-left: 20px;
-    margin-top: 10%;
+    margin: 10% 0 20% 20px;
     font-size: 3vh;
 }
 
@@ -40,21 +140,28 @@ header {
     height: auto;
 }
 
-.nav {
+.nav1 {
+    margin-bottom: 250px;
+}
+
+.nav1,
+.nav2 {
     display: grid;
     gap: 30px;
     margin-left: 20px;
 }
 
-.nav > div {
+.nav1 > div,
+.nav2 > div {
     display: flex;
     align-items: center;
-    font-size: 2.2vh;
+    font-size: 2vh;
     gap: 8px;
 }
 
-.nav > div > img {
-    width: 20%;
+.nav1 > div > img,
+.nav2 > div > img {
+    width: 15%;
     height: auto;
 }
 
